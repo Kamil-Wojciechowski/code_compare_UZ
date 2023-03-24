@@ -1,171 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instrukcja | Porównywarka kodów</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/app.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrukcja | Porównywarka kodów</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body>
-    <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="./index.html">Strona Główna</a>
-            <a class="nav-item nav-link" href="./compare.html">Porównanie</a>
-            <a class="nav-item nav-link active" href="./guideline.html">Instrukcja</a>
-            <a class="nav-item nav-link" href="./test.html">Test</a>
-          </div>
-        </div>
-      </nav>
-      <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Python
-              </button>
-            </h5>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-              Aby zainicjować środowisko Python, możesz postępować zgodnie z poniższymi krokami:
+  <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="./index.html">Strona Główna</a>
+        <a class="nav-item nav-link" href="./compare.html">Porównanie</a>
+        <a class="nav-item nav-link active" href="./guideline.html">Instrukcja</a>
+        <a class="nav-item nav-link" href="./test.html">Test</a>
+      </div>
+    </div>
+  </nav>
+  <div class="accordion accordion-flush" id="accordionGuideline">
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Python
+          </button>
+        </h5>
+      </div>
 
-<li> Pobierz i zainstaluj Python na swoim komputerze z oficjalnej strony internetowej Python (https://www.python.org/downloads/). Upewnij się, że pobierasz odpowiednią wersję dla swojego systemu operacyjnego. </li>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionGuideline">
+        <div class="accordion-body">
+          <ol>
+            Aby zainicjować środowisko Python, możesz postępować zgodnie z poniższymi krokami:
 
-<li> Otwórz terminal lub wiersz polecenia w swoim systemie operacyjnym. </li>
-<li> Użyj polecenia python --version, aby sprawdzić, czy Python jest już zainstalowany na twoim komputerze i jaką wersję posiadasz. </li>
-<li> Aby stworzyć nowe środowisko Python, zaleca się użycie narzędzia virtualenv, które pozwoli na izolację projektu od innych projektów i środowisk. </li>
-<li> Możesz zainstalować virtualenv za pomocą polecenia pip install virtualenv lub pip3 install virtualenv, w zależności od wersji Pythona, którą posiadasz. </li>
-<li> Następnie stwórz nowy folder na swoim komputerze, który będzie służył jako folder projektu. </li>
-<li> W terminalu przejdź do tego folderu, a następnie uruchom polecenie virtualenv env, aby utworzyć nowe środowisko Python. Możesz zmienić nazwę "env" na dowolną inną nazwę, którą chcesz nadać swojemu środowisku. </li>
-<li> Aby aktywować nowe środowisko Python, wpisz w terminalu polecenie source env/bin/activate. Jeśli korzystasz z systemu Windows, powinieneś użyć polecenia .\env\Scripts\activate. </li>
-<li> Teraz możesz zainstalować wymagane pakiety i moduły Pythona, używając polecenia pip install nazwa_pakietu. </li>
-<li> Aby zakończyć pracę ze środowiskiem Python, wpisz polecenie deactivate w terminalu. </li>
+            <li> Pobierz i zainstaluj Python na swoim komputerze z oficjalnej strony internetowej Python
+              (https://www.python.org/downloads/). Upewnij się, że pobierasz odpowiednią wersję dla swojego systemu
+              operacyjnego. </li>
 
-To już wszystko! Teraz masz środowisko Python gotowe do pracy z Twoim projektem.
-</ol>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Java
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-            <ol>
-              Aby zainicjować środowisko Java na swoim komputerze, postępuj zgodnie z poniższymi krokami:
+            <li> Otwórz terminal lub wiersz polecenia w swoim systemie operacyjnym. </li>
+            <li> Użyj polecenia python --version, aby sprawdzić, czy Python jest już zainstalowany na twoim komputerze i
+              jaką wersję posiadasz. </li>
+            <li> Aby stworzyć nowe środowisko Python, zaleca się użycie narzędzia virtualenv, które pozwoli na izolację
+              projektu od innych projektów i środowisk. </li>
+            <li> Możesz zainstalować virtualenv za pomocą polecenia pip install virtualenv lub pip3 install virtualenv,
+              w zależności od wersji Pythona, którą posiadasz. </li>
+            <li> Następnie stwórz nowy folder na swoim komputerze, który będzie służył jako folder projektu. </li>
+            <li> W terminalu przejdź do tego folderu, a następnie uruchom polecenie virtualenv env, aby utworzyć nowe
+              środowisko Python. Możesz zmienić nazwę "env" na dowolną inną nazwę, którą chcesz nadać swojemu
+              środowisku. </li>
+            <li> Aby aktywować nowe środowisko Python, wpisz w terminalu polecenie source env/bin/activate. Jeśli
+              korzystasz z systemu Windows, powinieneś użyć polecenia .\env\Scripts\activate. </li>
+            <li> Teraz możesz zainstalować wymagane pakiety i moduły Pythona, używając polecenia pip install
+              nazwa_pakietu. </li>
+            <li> Aby zakończyć pracę ze środowiskiem Python, wpisz polecenie deactivate w terminalu. </li>
 
-              <li> Pobierz i zainstaluj JDK (Java Development Kit) dla wersji 8, 11 lub 17, z oficjalnej strony Oracle (https://www.oracle.com/java/technologies/downloads/). Wybierz wersję odpowiednią dla swojego systemu operacyjnego.</li>
-              
-              <li> Otwórz terminal lub wiersz polecenia w swoim systemie operacyjnym. </li>
-              
-              <li> Użyj polecenia java -version, aby sprawdzić, czy Java jest już zainstalowana na twoim komputerze i jaką wersję posiadasz. </li>
-              
-              <li> Aby ustawić zmienną środowiskową JAVA_HOME, która wskazuje na folder, w którym jest zainstalowane JDK, wykonaj następujące kroki: </li>
-              
-              <ol type="a"> 
-                <li>Na systemie Windows:</li>
-                <ol type="I">
-              <li> Kliknij prawym przyciskiem myszy na Mój komputer lub Ten komputer i wybierz Właściwości.</li>
-              <li> Wybierz Zaawansowane ustawienia systemu. </li>
-              <li> Kliknij przycisk Zmienne środowiskowe. </li>
-              <li> W sekcji Zmienne systemowe kliknij przycisk Nowa. </li>
-              <li> Wpisz nazwę zmiennej JAVA_HOME. </li>
-              <li> Wpisz ścieżkę do folderu, w którym jest zainstalowane JDK, np. C:\Program Files\Java\jdk-17.0.1. </li>
-              <li> Kliknij OK. </li>
-                </ol>
-              <li> Na systemie Linux lub macOS: </li>
-              <ol type="I">
-              <li> Otwórz terminal. </li>
-              <li> Wpisz polecenie sudo nano /etc/environment. </li>
-              <li> W ostatniej linii pliku dodaj wpis JAVA_HOME="/ścieżka/do/folderu/zainstalowanego/JDK", np. JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64". </li>
-              <li> Zapisz plik i zamknij edytor nano. </li>
-              </ol>
-              </ol>
-              <li> Aby zaktualizować zmienne środowiskowe, zamknij i otwórz ponownie terminal lub wpisz w terminalu komendę source /ścieżka/do/pliku/environment (dla systemów Linux i macOS). </li>
-              
-              <li> Aby użyć konkretnej wersji JDK, należy ustawić zmienną środowiskową PATH, która wskazuje na folder bin w folderze JDK, wykonaj następujące kroki: </li>
-              
-              <ol type="a"> 
-              <li> Na systemie Windows: </li>
-              <ol type="I">
-               <li> Kliknij prawym przyciskiem myszy na Mój komputer lub Ten komputer i wybierz Właściwości. </li>
-               <li> Wybierz Zaawansowane ustawienia systemu. </li>
-               <li> Kliknij przycisk Zmienne środowiskowe. </li>
-               <li> W sekcji Zmienne systemowe znajdź zmienną PATH i kliknij przycisk Edytuj. </li>
-               <li> Dodaj ścieżkę do folderu bin w folderze JDK na końcu wartości zmiennej PATH, oddzielając ją od poprzedniej wartości średnikiem (;). </li>
-               <li> Dodaj ścieżkę do folderu bin w folderze JDK na końcu wartości zmiennej PATH, oddzielając ją od poprzedniej wartości średnikiem (;). Na przykład: ;%JAVA_HOME%\bin </li>
-               <li> Kliknij OK. </li>
-              </ol>
-              <li> Na systemie Linux lub macOS: </li>
-              <ol type="I">
-              <li> Otwórz terminal. </li>
-              <li> Wpisz polecenie sudo nano /etc/profile. </li>
-              <li> Przewiń na sam dół pliku i dodaj wpis export PATH=$PATH:/ścieżka/do/folderu/zainstalowanego/JDK/bin, np. export PATH=$PATH:/usr/lib/jvm/java-17-openjdk-amd64/bin. </li>
-              <li> Zapisz plik i zamknij edytor nano. </li>
-            </ol>  
-            </ol>
-
-              <li> Aby zaktualizować zmienne środowiskowe, zamknij i otwórz ponownie terminal lub wpisz w terminalu komendę source /ścieżka/do/pliku/profile (dla systemów Linux i macOS). </li>
-
-              <li> Możesz teraz uruchomić Javę z wiersza polecenia lub uruchomić dowolne narzędzia, takie jak Eclipse, Intellij IDEA lub Maven, które wymagają zainstalowanej wersji JDK. </li>
-            </ol>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                C#
-              </button>
-            </h5>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-              Oto instrukcja do inicjalizacji środowiska .NET:
-              
-
-<li> Pobierz i zainstaluj najnowszą wersję platformy .NET ze strony https://dotnet.microsoft.com/download </li>
-<li> Upewnij się, że ścieżka do folderu zawierającego narzędzia .NET jest dodana do zmiennej środowiskowej PATH. </li>
-<ol type="a">
-<li> Na systemie Windows: </li>
-<ol type="I">
-<li> Otwórz menu Start i wpisz "zmienne środowiskowe". </li>
-<li> Wybierz "Edytuj zmienne środowiskowe systemu". </li>
-<li> Kliknij przycisk "Zmienne środowiskowe". </li>
-<li> W sekcji "Zmienne systemowe" znajdź zmienną "Path" i kliknij "Edytuj". </li>
-<li> Kliknij "Nowy" i wpisz ścieżkę do folderu zawierającego narzędzia .NET, np. "C:\Program Files\dotnet". </li>
-<li> Kliknij "OK" w każdym oknie i zamknij menu "Zmienne środowiskowe". </li>
-</ol>
-<li> Na systemie Linux lub macOS: </li>
-<ol type="I">
-<li> Otwórz terminal. </li>
-<li> Wpisz polecenie export PATH=$PATH:/ścieżka/do/folderu/zawierającego/narzędzia/.NET, np. export PATH=$PATH:/usr/share/dotnet. </li>
-<li> Zapisz plik i zamknij edytor. </li>
-</ol>
-</ol>
-<li> Aby sprawdzić, czy .NET jest poprawnie zainstalowany i skonfigurowany, otwórz terminal i wpisz polecenie dotnet --version. Powinieneś zobaczyć numer wersji .NET, co oznacza, że jest ona gotowa do użycia. </li>
-<li> Możesz teraz korzystać z narzędzi .NET, takich jak Visual Studio lub Visual Studio Code, aby tworzyć aplikacje w C#, F# lub innych językach, które obsługuje .NET. </li>
-
-Mam nadzieję, że ta instrukcja jest dla Ciebie pomocna!
-</ol>            
-</div>
-          </div>
+            To już wszystko! Teraz masz środowisko Python gotowe do pracy z Twoim projektem.
+          </ol>
         </div>
       </div>
-    </body>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Java
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionGuideline">
+        <div class="accordion-body">
+          <ol>
+            Aby zainicjować środowisko Java na swoim komputerze, postępuj zgodnie z poniższymi krokami:
+
+            <li> Pobierz i zainstaluj JDK (Java Development Kit) dla wersji 8, 11 lub 17, z oficjalnej strony Oracle
+              (https://www.oracle.com/java/technologies/downloads/). Wybierz wersję odpowiednią dla swojego systemu
+              operacyjnego.</li>
+
+            <li> Otwórz terminal lub wiersz polecenia w swoim systemie operacyjnym. </li>
+
+            <li> Użyj polecenia java -version, aby sprawdzić, czy Java jest już zainstalowana na twoim komputerze i jaką
+              wersję posiadasz. </li>
+
+            <li> Aby ustawić zmienną środowiskową JAVA_HOME, która wskazuje na folder, w którym jest zainstalowane JDK,
+              wykonaj następujące kroki: </li>
+
+            <ol type="a">
+              <li>Na systemie Windows:</li>
+              <ol type="I">
+                <li> Kliknij prawym przyciskiem myszy na Mój komputer lub Ten komputer i wybierz Właściwości.</li>
+                <li> Wybierz Zaawansowane ustawienia systemu. </li>
+                <li> Kliknij przycisk Zmienne środowiskowe. </li>
+                <li> W sekcji Zmienne systemowe kliknij przycisk Nowa. </li>
+                <li> Wpisz nazwę zmiennej JAVA_HOME. </li>
+                <li> Wpisz ścieżkę do folderu, w którym jest zainstalowane JDK, np. C:\Program Files\Java\jdk-17.0.1.
+                </li>
+                <li> Kliknij OK. </li>
+              </ol>
+              <li> Na systemie Linux lub macOS: </li>
+              <ol type="I">
+                <li> Otwórz terminal. </li>
+                <li> Wpisz polecenie sudo nano /etc/environment. </li>
+                <li> W ostatniej linii pliku dodaj wpis JAVA_HOME="/ścieżka/do/folderu/zainstalowanego/JDK", np.
+                  JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64". </li>
+                <li> Zapisz plik i zamknij edytor nano. </li>
+              </ol>
+            </ol>
+            <li> Aby zaktualizować zmienne środowiskowe, zamknij i otwórz ponownie terminal lub wpisz w terminalu
+              komendę source /ścieżka/do/pliku/environment (dla systemów Linux i macOS). </li>
+
+            <li> Aby użyć konkretnej wersji JDK, należy ustawić zmienną środowiskową PATH, która wskazuje na folder bin
+              w folderze JDK, wykonaj następujące kroki: </li>
+
+            <ol type="a">
+              <li> Na systemie Windows: </li>
+              <ol type="I">
+                <li> Kliknij prawym przyciskiem myszy na Mój komputer lub Ten komputer i wybierz Właściwości. </li>
+                <li> Wybierz Zaawansowane ustawienia systemu. </li>
+                <li> Kliknij przycisk Zmienne środowiskowe. </li>
+                <li> W sekcji Zmienne systemowe znajdź zmienną PATH i kliknij przycisk Edytuj. </li>
+                <li> Dodaj ścieżkę do folderu bin w folderze JDK na końcu wartości zmiennej PATH, oddzielając ją od
+                  poprzedniej wartości średnikiem (;). </li>
+                <li> Dodaj ścieżkę do folderu bin w folderze JDK na końcu wartości zmiennej PATH, oddzielając ją od
+                  poprzedniej wartości średnikiem (;). Na przykład: ;%JAVA_HOME%\bin </li>
+                <li> Kliknij OK. </li>
+              </ol>
+              <li> Na systemie Linux lub macOS: </li>
+              <ol type="I">
+                <li> Otwórz terminal. </li>
+                <li> Wpisz polecenie sudo nano /etc/profile. </li>
+                <li> Przewiń na sam dół pliku i dodaj wpis export
+                  PATH=$PATH:/ścieżka/do/folderu/zainstalowanego/JDK/bin, np. export
+                  PATH=$PATH:/usr/lib/jvm/java-17-openjdk-amd64/bin. </li>
+                <li> Zapisz plik i zamknij edytor nano. </li>
+              </ol>
+            </ol>
+
+            <li> Aby zaktualizować zmienne środowiskowe, zamknij i otwórz ponownie terminal lub wpisz w terminalu
+              komendę source /ścieżka/do/pliku/profile (dla systemów Linux i macOS). </li>
+
+            <li> Możesz teraz uruchomić Javę z wiersza polecenia lub uruchomić dowolne narzędzia, takie jak Eclipse,
+              Intellij IDEA lub Maven, które wymagają zainstalowanej wersji JDK. </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            C#
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionGuideline">
+        <div class="accordion-body">
+          <ol>
+            Oto instrukcja do inicjalizacji środowiska .NET:
+
+
+            <li> Pobierz i zainstaluj najnowszą wersję platformy .NET ze strony https://dotnet.microsoft.com/download
+            </li>
+            <li> Upewnij się, że ścieżka do folderu zawierającego narzędzia .NET jest dodana do zmiennej środowiskowej
+              PATH. </li>
+            <ol type="a">
+              <li> Na systemie Windows: </li>
+              <ol type="I">
+                <li> Otwórz menu Start i wpisz "zmienne środowiskowe". </li>
+                <li> Wybierz "Edytuj zmienne środowiskowe systemu". </li>
+                <li> Kliknij przycisk "Zmienne środowiskowe". </li>
+                <li> W sekcji "Zmienne systemowe" znajdź zmienną "Path" i kliknij "Edytuj". </li>
+                <li> Kliknij "Nowy" i wpisz ścieżkę do folderu zawierającego narzędzia .NET, np. "C:\Program
+                  Files\dotnet". </li>
+                <li> Kliknij "OK" w każdym oknie i zamknij menu "Zmienne środowiskowe". </li>
+              </ol>
+              <li> Na systemie Linux lub macOS: </li>
+              <ol type="I">
+                <li> Otwórz terminal. </li>
+                <li> Wpisz polecenie export PATH=$PATH:/ścieżka/do/folderu/zawierającego/narzędzia/.NET, np. export
+                  PATH=$PATH:/usr/share/dotnet. </li>
+                <li> Zapisz plik i zamknij edytor. </li>
+              </ol>
+            </ol>
+            <li> Aby sprawdzić, czy .NET jest poprawnie zainstalowany i skonfigurowany, otwórz terminal i wpisz
+              polecenie dotnet --version. Powinieneś zobaczyć numer wersji .NET, co oznacza, że jest ona gotowa do
+              użycia. </li>
+            <li> Możesz teraz korzystać z narzędzi .NET, takich jak Visual Studio lub Visual Studio Code, aby tworzyć
+              aplikacje w C#, F# lub innych językach, które obsługuje .NET. </li>
+
+            Mam nadzieję, że ta instrukcja jest dla Ciebie pomocna!
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
 
 </html>
