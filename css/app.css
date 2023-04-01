@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=app.css.map */
+.content {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.guideline {
+  text-align: left;
+}
+/*# sourceMappingURL=app.css.map */

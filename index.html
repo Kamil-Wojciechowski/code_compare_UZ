@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STrona Główna | Porównywarka kodów</title>
+    <title>Porównanie | Porównywarka kodów</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/app.js"></script>
@@ -14,15 +15,519 @@
     <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="./index.html">Strona Główna</a>
-            <a class="nav-item nav-link" href="./compare.html">Porównanie</a>
+            <a class="nav-item nav-link active" href="./index.html">Porównanie</a>
             <a class="nav-item nav-link" href="./guideline.html">Instrukcja</a>
             <a class="nav-item nav-link" href="./test.html">Test</a>
           </div>
         </div>
       </nav>
-    <div><p>Porównywarka kodów - o co chodzi?</p>
-    <p>Porównywarka została stworzona w celach dydaktycznych. Dzięki niej można zapoznać się z podstawami języka Python, Java oraz C#, jak i porównać składnię każdego z tych języków.</p>
-<p>Porównywarka pozwala również przetestować swoją wiedzę :)</p></div>
+      <div class="content">
+        <div><h2>Porównywarka kodów - o co chodzi?</h2>
+            <p>Porównywarka została stworzona w celach dydaktycznych. Dzięki niej można zapoznać się z podstawami języka Python, Java oraz C#, jak i porównać składnię każdego z tych języków.</p>
+        <h5>Porównywarka pozwala również przetestować swoją wiedzę :)</h5></div>
+    </div>
+    <style>
+        pre {
+            margin: 0;
+        }
+        div[id^="example_"] .row:nth-child(odd){
+            font-weight: bold;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <select id="select_example" class="form-select mb-3" onchange="showExamples();">
+            <option value="variables">Zmienne</option>
+            <option value="print">Wyświetlenie tekstu w konsoli</option>
+            <option value="input">Pobieranie inputu</option>
+            <option value="if">Instrukcje warunkowe</option>
+            <option value="if_short">Krótkie instrukcje warunkowe</option>
+            <option value="switch">Instrukcja switch</option>
+            <option value="loop_for">Pętla For</option>
+            <option value="loop_foreach">Pętla Foreach</option>
+            <option value="loop_while">Pętla while</option>
+            <option value="functions">Funkcje</option>
+            <option value="objects">Obiekty</option>
+        </select>
+
+        <div id="example_variables">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>is_condition = True
+<!--                  -->int_number = 2
+<!--                  -->float_number = 2.0
+<!--                  -->text = 'string'</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        boolean isCondition = true;
+<!--                  -->        int intNumber = 2;
+<!--                  -->        float floatNumber = 2.0f;
+<!--                  -->        String text = "string";
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        bool isCondition = true;
+<!--                  -->        int intNumber = 2;
+<!--                  -->        float floatNumber = 2.0f;
+<!--                  -->        string text = "string";
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_print" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>print('Uniwersytet Zielonogórski')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        System.out.println("Uniwersytet Zielonogórski");
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        Console.WriteLine("Uniwersytet Zielonogórski");
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+        
+        <div id="example_input" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>print('Wpisz tekst: ', end='')
+<!--                  -->text = input()
+<!--                  -->print(f'Wpisano tekst: {text}')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        System.out.print("Wpisz tekst: ");
+<!--                  -->        Scanner scanner = new Scanner(System.in);
+<!--                  -->        String text = scanner.next();
+<!--                  -->        scanner.close();
+<!--                  -->        System.out.println("Wpisano tekst: " + text);
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        Console.Write("Wpisz tekst: ");
+<!--                  -->        string text = Console.ReadLine();
+<!--                  -->        Console.WriteLine($"Wpisano tekst: {text}");
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_if" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>number = 1
+<!--                  -->if number < 1:
+<!--                  -->    print('Warunek if')
+<!--                  -->elif number > 1:
+<!--                  -->    print('Warunek else if')
+<!--                  -->else:
+<!--                  -->    print('Warunek else')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        int number = 1;
+<!--                  -->        if (number < 1) {
+<!--                  -->            System.out.println("Warunek if");
+<!--                  -->        } else if (number > 1) {
+<!--                  -->            System.out.println("Warunek else if");
+<!--                  -->        } else {
+<!--                  -->            System.out.println("Warunek else");
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        int number = 1;
+<!--                  -->        if (number < 1) {
+<!--                  -->            Console.WriteLine("Warunek if");
+<!--                  -->        } else if (number > 1) {
+<!--                  -->            Console.WriteLine("Warunek else if");
+<!--                  -->        } else {
+<!--                  -->            Console.WriteLine("Warunek else");
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_if_short" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>is_condition = True
+<!--                  -->print('Jestem prawdą') if is_condition else print('Nie jestem prawdą')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        boolean isCondition = true;
+<!--                  -->        System.out.println(isCondition ? "Jestem prawdą" : "Nie jestem prawdą");
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        bool isCondition = true;
+<!--                  -->        Console.WriteLine(isCondition ? "Jestem prawdą" : "Nie jestem prawdą");
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_switch" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python (3.10+)
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>number = 1
+<!--                  -->match number:
+<!--                  -->    case 1:
+<!--                  -->        print('Przypadek 1')
+<!--                  -->    case 2 | 3:
+<!--                  -->        print('Przypadek 2 lub 3')
+<!--                  -->    case _:
+<!--                  -->        print('Przypadek domyślny')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        int number = 1;
+<!--                  -->        switch(number) {
+<!--                  -->            case 1:
+<!--                  -->                System.out.println("Przypadek 1");
+<!--                  -->                break;
+<!--                  -->            case 2:
+<!--                  -->            case 3:
+<!--                  -->                System.out.println("Przypadek 2 lub 3");
+<!--                  -->                break;
+<!--                  -->            default:
+<!--                  -->                System.out.println("Przypadek domyślny");
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        int number = 1;
+<!--                  -->        switch(number) {
+<!--                  -->            case 1:
+<!--                  -->                Console.WriteLine("Przypadek 1");
+<!--                  -->                break;
+<!--                  -->            case 2:
+<!--                  -->            case 3:
+<!--                  -->                Console.WriteLine("Przypadek 2 lub 3");
+<!--                  -->                break;
+<!--                  -->            default:
+<!--                  -->                Console.WriteLine("Przypadek domyślny");
+<!--                  -->                break;
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_loop_for" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>for i in range(5):
+<!--                  -->    print(f'Iteracja: {i}')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        for (int i = 0; i < 5; i++) {
+<!--                  -->            System.out.println("Iteracja: " + i);
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        for (int i = 0; i < 5; i++) {
+<!--                  -->            Console.WriteLine($"Iteracja: {i}");
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_loop_foreach" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>names = ['Wincenty', 'Piotr', 'Żaneta']
+<!--                  -->for name in names:
+<!--                  -->    print(f'Aktualnie: {name}')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        String[] names = new String[] {"Wincenty", "Piotr", "Żaneta"};
+<!--                  -->        for (String name : names) {
+<!--                  -->            System.out.println("Aktualnie: " + name);
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        string[] names = new string[] {"Wincenty", "Piotr", "Żaneta"};
+<!--                  -->        foreach(string name in names) {
+<!--                  -->            Console.WriteLine($"Aktualnie: {name}");
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_loop_while" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>number = 1
+<!--                  -->while number < 5:
+<!--                  -->    print(f'Iteracja: {number}')
+<!--                  -->    number += 1</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        int number = 1;
+<!--                  -->        while (number < 5) {
+<!--                  -->            System.out.println("Iteracja: " + number);
+<!--                  -->            number++;
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        int number = 1;
+<!--                  -->        while (number < 5) {
+<!--                  -->            Console.WriteLine($"Iteracja: {number}");
+<!--                  -->            number++;
+<!--                  -->        }
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_functions" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>def my_print(argument):
+<!--                  -->    print(argument)
+<!--                  -->
+<!--                  -->my_print('Przykładowy argument')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        myPrint("Przykładowy argument");
+<!--                  -->    }
+<!--                  -->
+<!--                  -->    public static void myPrint(String argument) {
+<!--                  -->        System.out.println("Przykładowy argument");
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        MyPrint("Przykładowy argument");
+<!--                  -->    }
+<!--                  -->
+<!--                  -->    public static void MyPrint(string argument) {
+<!--                  -->        Console.WriteLine(argument);
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="example_objects" class="d-none">
+            <div class="container">
+                <div class="row">
+                    Python
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>class Car:
+<!--                  -->    def __init__(self, brand, color):
+<!--                  -->        self.brand = brand
+<!--                  -->        self.color = color
+<!--                  -->
+<!--                  -->my_car = Car('Volvo', 'zielony')
+<!--                  -->print(f'Mój samochód jest marki {my_car.brand}, a jego kolor to {my_car.color}')</pre>
+                </div>
+                <div class="row">
+                    Java
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        Car myCar = new Car("Volvo", "zielony");
+<!--                  -->        System.out.println("Mój samochód jest marki " + myCar.brand
+<!--                  -->            + ", a jego kolor to " + myCar.color);
+<!--                  -->    }
+<!--                  -->}
+<!--                  -->
+<!--                  -->class Car {
+<!--                  -->    public String brand;
+<!--                  -->    public String color;
+<!--                  -->
+<!--                  -->    public Car(String brand, String color) {
+<!--                  -->        this.brand = brand;
+<!--                  -->        this.color = color;
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    C#
+                </div>
+                <div class="row border p-3 mb-3">
+                    <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        Car myCar = new Car("Volvo", "zielony");
+<!--                  -->        Console.WriteLine($"Mój samochód jest marki {myCar.brand}, a jego kolor to {myCar.color}");
+<!--                  -->    }
+<!--                  -->}
+<!--                  -->
+<!--                  -->class Car {
+<!--                  -->    public string brand;
+<!--                  -->    public string color;
+<!--                  -->
+<!--                  -->    public Car(string brand, string color) {
+<!--                  -->        this.brand = brand;
+<!--                  -->        this.color = color;
+<!--                  -->    }
+<!--                  -->}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        
+    </script>
 </body>
 </html>
