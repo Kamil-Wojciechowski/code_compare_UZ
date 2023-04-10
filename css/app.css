@@ -1,12 +1,14 @@
 .content {
   margin: 0 auto;
-  width: 60%;
-  text-align: center;
+  width: 70%;
+  text-align: left;
   padding-top: 5vh;
+  padding-bottom: 1vh;
 }
 
-.guideline {
-  text-align: left;
+.container {
+  margin: 0 auto;
+  margin-top: 2vh;
 }
 
 .console {

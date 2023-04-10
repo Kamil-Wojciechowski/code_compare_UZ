@@ -63,6 +63,7 @@ $(document).ready(function () {
         $('.ex_obj2').val(inputText);
         $("#ex_obj2d").text(inputText);
     });
+
     $("form").submit(function (event) {
         event.preventDefault();
 
@@ -105,7 +106,29 @@ $(document).ready(function () {
         if ($("input[name=q10]:checked").val() == "ans3") {
             numCorrect++;
         }
-        var percentage = (numcorrect/10)*100;
+        var percentage = (numCorrect / 10) * 100;
+        var d = new Date();
+        var strDate = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
+        var person = $("#name").val();
+        console.log(person);
+        if (percentage > 79) {
+            generateDiploma(strDate,percentage,person);
+            window.open('./diploma.html', '_blank', 'width=800,height=600');
+            
+        }
+        else {
+                     
+            window.open('./diploma.html', '_blank', 'width=800,height=600');
+        }
     });
 });
 
+function generateDiploma(strDate,percentage,person){
+    console.log("UHUUUU");
+    console.log(percentage);
+    console.log(person);
+    if(typeof percentage !== undefined){
+        $("#result").html("<h1 class='text-dark'>Gratulacje!</h1><h2 class='text-muted'>Uzyskałeś bardzo wysoki wynik na naszym teście Porównywarki Kodów!</h2><p>Twoja ciężka praca i poświęcenie przyniosły efekty. Twój wysoki wynik jest świadectwem Twojej wiedzy i umiejętności. Bądź nadal tak skuteczny!</p><div class='score text-dark'>Twój wynik to:"+percentage+"</div><h4>Certyfikat dla:</h4>"+person+"<h4></h4><p>Data:</p><p>"+strDate+"</p><div>Ten certyfikat nie jest oficjalnym dokumentem, tylko cyfrową reprezentacją osiągnięcia.</div>")
+
+    }
+}       

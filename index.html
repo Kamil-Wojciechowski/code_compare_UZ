@@ -30,48 +30,48 @@
                 Python, Java oraz C#, jak i porównać składnię każdego z tych języków.</p>
             <h5>Porównywarka pozwala również przetestować swoją wiedzę :)</h5>
         </div>
-    </div>
-    <style>
-        pre {
-            margin: 0;
-        }
 
-        div[id^="example_"] .row:nth-child(odd) {
-            font-weight: bold;
-        }
-    </style>
+        <style>
+            pre {
+                margin: 0;
+            }
 
-    <div class="container mt-5">
-        <select id="select_example" class="form-select mb-3" onchange="showExamples();">
-            <option value="variables">Zmienne</option>
-            <option value="print">Wyświetlenie tekstu w konsoli</option>
-            <option value="input">Pobieranie inputu</option>
-            <option value="if">Instrukcje warunkowe</option>
-            <option value="if_short">Krótkie instrukcje warunkowe</option>
-            <option value="switch">Instrukcja switch</option>
-            <option value="loop_for">Pętla For</option>
-            <option value="loop_foreach">Pętla Foreach</option>
-            <option value="loop_while">Pętla while</option>
-            <option value="functions">Funkcje</option>
-            <option value="objects">Obiekty</option>
-        </select>
+            div[id^="example_"] .row:nth-child(odd) {
+                font-weight: bold;
+            }
+        </style>
 
-        <div id="example_variables">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>isCondition = True
+        <div class="container mt-5">
+            <select id="select_example" class="form-select mb-3" onchange="showExamples();">
+                <option value="variables">Zmienne</option>
+                <option value="print">Wyświetlenie tekstu w konsoli</option>
+                <option value="input">Pobieranie inputu</option>
+                <option value="if">Instrukcje warunkowe</option>
+                <option value="if_short">Krótkie instrukcje warunkowe</option>
+                <option value="switch">Instrukcja switch</option>
+                <option value="loop_for">Pętla For</option>
+                <option value="loop_foreach">Pętla Foreach</option>
+                <option value="loop_while">Pętla while</option>
+                <option value="functions">Funkcje</option>
+                <option value="objects">Obiekty</option>
+            </select>
+
+            <div id="example_variables">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>isCondition = True
 <!--                  -->intNumber = 2
 <!--                  -->floatNumber = 2.0
 <!--                  -->text = 'string'</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        boolean isCondition = true;
 <!--                  -->        int intNumber = 2;
@@ -79,12 +79,12 @@
 <!--                  -->        String text = "string";
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        bool isCondition = true;
 <!--                  -->        int intNumber = 2;
@@ -92,62 +92,62 @@
 <!--                  -->        string text = "string";
 <!--                  -->    }
 <!--                  -->}</pre>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_print" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>print('<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+            <div id="example_print" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>print('<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>')</pre>
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        System.out.println("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        Console.WriteLine("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console" id="ex_printd">
-                    Uniwersytet Zielonogórski
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console" id="ex_printd">
+                        Uniwersytet Zielonogórski
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_input" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>print('Wpisz tekst: ', end='')
+            <div id="example_input" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>print('Wpisz tekst: ', end='')
 <!--                  -->text = input()
 <!--                  -->print(f'Wpisano tekst: {text}')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        System.out.print("Wpisz tekst: ");
 <!--                  -->        Scanner scanner = new Scanner(System.in);
@@ -156,48 +156,48 @@
 <!--                  -->        System.out.println("Wpisano tekst: " + text);
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        Console.Write("Wpisz tekst: ");
 <!--                  -->        string text = Console.ReadLine();
 <!--                  -->        Console.WriteLine($"Wpisano tekst: {text}");
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console">
-                    Wpisz tekst: aaa<br>
-                    Wpisano tekst: aaa
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console">
+                        Wpisz tekst: aaa<br>
+                        Wpisano tekst: aaa
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_if" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>number = <input type="text" class="ex_if" value="1"></input>
+            <div id="example_if" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>number = <input type="text" class="ex_if" value="1"></input>
 <!--                  -->if number < 1:
 <!--                  -->    print('Warunek if')
 <!--                  -->elif number > 1:
 <!--                  -->    print('Warunek else if')
 <!--                  -->else:
 <!--                  -->    print('Warunek else')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        int number = <input type="text" class="ex_if" value="1"></input>;
 <!--                  -->        if (number < 1) {
@@ -209,12 +209,12 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        int number = <input type="text" class="ex_if" value="1"></input>;
 <!--                  -->        if (number < 1) {
@@ -226,63 +226,63 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console" id="ex_ifd">
-                    Warunek else
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console" id="ex_ifd">
+                        Warunek else
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_if_short" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>is_condition = <input type="text" class="ex_if_sh" value="True"></input>
+            <div id="example_if_short" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>is_condition = <input type="text" class="ex_if_sh" value="True"></input>
 <!--                  -->print('Jestem prawdą') if is_condition else print('Nie jestem prawdą')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        boolean isCondition = <input type="text" class="ex_if_sh" value="true"></input>;
 <!--                  -->        System.out.println(isCondition ? "Jestem prawdą" : "Nie jestem prawdą");
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        bool isCondition = <input type="text" class="ex_if_sh" value="true"></input>;
 <!--                  -->        Console.WriteLine(isCondition ? "Jestem prawdą" : "Nie jestem prawdą");
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console" id="ex_if_shd">
-                    Jestem prawdą
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console" id="ex_if_shd">
+                        Jestem prawdą
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_switch" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python (3.10+)
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>number = <input type="text" class="ex_sw" value="1"></input>
+            <div id="example_switch" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python (3.10+)
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>number = <input type="text" class="ex_sw" value="1"></input>
 <!--                  -->match number:
 <!--                  -->    case 1:
 <!--                  -->        print('Przypadek 1')
@@ -290,12 +290,12 @@
 <!--                  -->        print('Przypadek 2 lub 3')
 <!--                  -->    case _:
 <!--                  -->        print('Przypadek domyślny')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        int number = <input type="text" class="ex_sw" value="1"></input>;
 <!--                  -->        switch(number) {
@@ -311,12 +311,12 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        int number = <input type="text" class="ex_sw" value="1"></input>;
 <!--                  -->        switch(number) {
@@ -333,77 +333,77 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console" id="ex_swd">
-                    Przypadek 1
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console" id="ex_swd">
+                        Przypadek 1
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_loop_for" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>for i in range(5):
+            <div id="example_loop_for" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>for i in range(5):
 <!--                  -->    print(f'Iteracja: {i}')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        for (int i = 0; i < 5; i++) {
 <!--                  -->            System.out.println("Iteracja: " + i);
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        for (int i = 0; i < 5; i++) {
 <!--                  -->            Console.WriteLine($"Iteracja: {i}");
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console">
-                    Iteracja: 0<br>
-                    Iteracja: 1<br>
-                    Iteracja: 2<br>
-                    Iteracja: 3<br>
-                    Iteracja: 4<br>
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console">
+                        Iteracja: 0<br>
+                        Iteracja: 1<br>
+                        Iteracja: 2<br>
+                        Iteracja: 3<br>
+                        Iteracja: 4<br>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_loop_foreach" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>names = ['Wincenty', 'Piotr', 'Żaneta']
+            <div id="example_loop_foreach" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>names = ['Wincenty', 'Piotr', 'Żaneta']
 <!--                  -->for name in names:
 <!--                  -->    print(f'Aktualnie: {name}')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        String[] names = new String[] {"Wincenty", "Piotr", "Żaneta"};
 <!--                  -->        for (String name : names) {
@@ -411,12 +411,12 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        string[] names = new string[] {"Wincenty", "Piotr", "Żaneta"};
 <!--                  -->        foreach(string name in names) {
@@ -424,34 +424,34 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console">
-                    Aktualnie: Wincenty<br>
-                    Aktualnie: Piotr<br>
-                    Aktualnie: Żaneta<br>
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console">
+                        Aktualnie: Wincenty<br>
+                        Aktualnie: Piotr<br>
+                        Aktualnie: Żaneta<br>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_loop_while" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>number = 1
+            <div id="example_loop_while" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>number = 1
 <!--                  -->while number < 5:
 <!--                  -->    print(f'Iteracja: {number}')
 <!--                  -->    number += 1</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        int number = 1;
 <!--                  -->        while (number < 5) {
@@ -460,12 +460,12 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        int number = 1;
 <!--                  -->        while (number < 5) {
@@ -474,35 +474,35 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console">
-                    Iteracja: 1<br>
-                    Iteracja: 2<br>
-                    Iteracja: 3<br>
-                    Iteracja: 4<br>
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console">
+                        Iteracja: 1<br>
+                        Iteracja: 2<br>
+                        Iteracja: 3<br>
+                        Iteracja: 4<br>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_functions" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>def my_print(argument):
+            <div id="example_functions" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>def my_print(argument):
 <!--                  -->    print(argument)
 <!--                  -->
 <!--                  -->my_print('Przykładowy argument')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        myPrint("Przykładowy argument");
 <!--                  -->    }
@@ -511,12 +511,12 @@
 <!--                  -->        System.out.println("Przykładowy argument");
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        MyPrint("Przykładowy argument");
 <!--                  -->    }
@@ -525,35 +525,35 @@
 <!--                  -->        Console.WriteLine(argument);
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console">
-                    Przykładowy argument
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console">
+                        Przykładowy argument
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="example_objects" class="d-none">
-            <div class="container">
-                <div class="row">
-                    Python
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>class Car:
+            <div id="example_objects" class="d-none">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>class Car:
 <!--                  -->    def __init__(self, brand, color):
 <!--                  -->        self.brand = brand
 <!--                  -->        self.color = color
 <!--                  -->
 <!--                  -->my_car = Car('<input type="text" class="ex_obj1" value="Volvo"></input>', '<input type="text" class="ex_obj2" value="zielony"></input>')
 <!--                  -->print(f'Mój samochód jest marki {my_car.brand}, a jego kolor to {my_car.color}')</pre>
-                </div>
-                <div class="row">
-                    Java
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>public class Main {
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
 <!--                  -->        Car myCar = new Car("<input type="text" class="ex_obj1" value="Volvo"></input>", "<input type="text" class="ex_obj2" value="zielony"></input>");
 <!--                  -->        System.out.println("Mój samochód jest marki " + myCar.brand
@@ -570,12 +570,12 @@
 <!--                  -->        this.color = color;
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    C#
-                </div>
-                <div class="row border p-3 mb-3">
-                    <pre>internal class Program {
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
 <!--                  -->        Car myCar = new Car("<input type="text" class="ex_obj1" value="Volvo"></input>", "<input type="text" class="ex_obj2" value="zielony"></input>");
 <!--                  -->        Console.WriteLine($"Mój samochód jest marki {myCar.brand}, a jego kolor to {myCar.color}");
@@ -591,18 +591,18 @@
 <!--                  -->        this.color = color;
 <!--                  -->    }
 <!--                  -->}</pre>
-                </div>
-                <div class="row">
-                    Wynik kompilacji kodu
-                </div>
-                <div class="row border p-3 mb-3 console">
-                    <p>Mój samochód jest marki <span id="ex_obj1d">Volvo</span>, a jego kolor to <span
-                            id="ex_obj2d">zielony</span></p>
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console">
+                        <p>Mój samochód jest marki <span id="ex_obj1d">Volvo</span>, a jego kolor to <span
+                                id="ex_obj2d">zielony</span></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
 
     </script>
