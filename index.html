@@ -96,7 +96,7 @@
                     Python
                 </div>
                 <div class="row border p-3 mb-3">
-                    <pre>print('Uniwersytet Zielonogórski')</pre>
+                    <pre>print('<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>')</pre>
                 </div>
                 <div class="row">
                     Java
@@ -104,7 +104,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
-<!--                  -->        System.out.println("Uniwersytet Zielonogórski");
+<!--                  -->        System.out.println("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
 <!--                  -->    }
 <!--                  -->}</pre>
                 </div>
@@ -114,9 +114,15 @@
                 <div class="row border p-3 mb-3">
                     <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
-<!--                  -->        Console.WriteLine("Uniwersytet Zielonogórski");
+<!--                  -->        Console.WriteLine("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
 <!--                  -->    }
 <!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" id="ex_printd" >
+                    Uniwersytet Zielonogórski
                 </div>
             </div>
         </div>
@@ -157,6 +163,13 @@
 <!--                  -->    }
 <!--                  -->}</pre>
                 </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" >
+                    Wpisz tekst: aaa<br>
+                    Wpisano tekst: aaa
+                </div>
             </div>
         </div>
 
@@ -166,7 +179,7 @@
                     Python
                 </div>
                 <div class="row border p-3 mb-3">
-                    <pre>number = 1
+                    <pre>number = <input type="text" class="ex_if" value="1"></input>
 <!--                  -->if number < 1:
 <!--                  -->    print('Warunek if')
 <!--                  -->elif number > 1:
@@ -180,7 +193,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
-<!--                  -->        int number = 1;
+<!--                  -->        int number = <input type="text" class="ex_if" value="1"></input>;
 <!--                  -->        if (number < 1) {
 <!--                  -->            System.out.println("Warunek if");
 <!--                  -->        } else if (number > 1) {
@@ -197,7 +210,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
-<!--                  -->        int number = 1;
+<!--                  -->        int number = <input type="text" class="ex_if" value="1"></input>;
 <!--                  -->        if (number < 1) {
 <!--                  -->            Console.WriteLine("Warunek if");
 <!--                  -->        } else if (number > 1) {
@@ -208,6 +221,12 @@
 <!--                  -->    }
 <!--                  -->}</pre>
                 </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" id="ex_ifd">
+                    Warunek else
+                </div>
             </div>
         </div>
 
@@ -217,7 +236,7 @@
                     Python
                 </div>
                 <div class="row border p-3 mb-3">
-                    <pre>is_condition = True
+                    <pre>is_condition = <input type="text" class="ex_if_sh" value="True"></input>
 <!--                  -->print('Jestem prawdą') if is_condition else print('Nie jestem prawdą')</pre>
                 </div>
                 <div class="row">
@@ -226,7 +245,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
-<!--                  -->        boolean isCondition = true;
+<!--                  -->        boolean isCondition = <input type="text" class="ex_if_sh" value="true"></input>;
 <!--                  -->        System.out.println(isCondition ? "Jestem prawdą" : "Nie jestem prawdą");
 <!--                  -->    }
 <!--                  -->}</pre>
@@ -237,10 +256,16 @@
                 <div class="row border p-3 mb-3">
                     <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
-<!--                  -->        bool isCondition = true;
+<!--                  -->        bool isCondition = <input type="text" class="ex_if_sh" value="true"></input>;
 <!--                  -->        Console.WriteLine(isCondition ? "Jestem prawdą" : "Nie jestem prawdą");
 <!--                  -->    }
 <!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" id="ex_if_shd">
+                    Jestem prawdą
                 </div>
             </div>
         </div>
@@ -251,7 +276,7 @@
                     Python (3.10+)
                 </div>
                 <div class="row border p-3 mb-3">
-                    <pre>number = 1
+                    <pre>number = <input type="text" class="ex_sw" value="1"></input>
 <!--                  -->match number:
 <!--                  -->    case 1:
 <!--                  -->        print('Przypadek 1')
@@ -266,7 +291,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
-<!--                  -->        int number = 1;
+<!--                  -->        int number = <input type="text" class="ex_sw" value="1"></input>;
 <!--                  -->        switch(number) {
 <!--                  -->            case 1:
 <!--                  -->                System.out.println("Przypadek 1");
@@ -287,7 +312,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
-<!--                  -->        int number = 1;
+<!--                  -->        int number = <input type="text" class="ex_sw" value="1"></input>;
 <!--                  -->        switch(number) {
 <!--                  -->            case 1:
 <!--                  -->                Console.WriteLine("Przypadek 1");
@@ -302,6 +327,12 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" id="ex_swd">
+                    Przypadek 1
                 </div>
             </div>
         </div>
@@ -338,6 +369,16 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" >
+                    Iteracja: 0<br>
+                    Iteracja: 1<br>
+                    Iteracja: 2<br>
+                    Iteracja: 3<br>
+                    Iteracja: 4<br>
                 </div>
             </div>
         </div>
@@ -377,6 +418,14 @@
 <!--                  -->        }
 <!--                  -->    }
 <!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console">
+                    Aktualnie: Wincenty<br>
+                    Aktualnie: Piotr<br>
+                    Aktualnie: Żaneta<br>
                 </div>
             </div>
         </div>
@@ -420,6 +469,15 @@
 <!--                  -->    }
 <!--                  -->}</pre>
                 </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" >
+                    Iteracja: 1<br>
+                    Iteracja: 2<br>
+                    Iteracja: 3<br>
+                    Iteracja: 4<br>
+                </div>
             </div>
         </div>
 
@@ -462,6 +520,12 @@
 <!--                  -->    }
 <!--                  -->}</pre>
                 </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" >
+                    Przykładowy argument
+                </div>
             </div>
         </div>
 
@@ -476,7 +540,7 @@
 <!--                  -->        self.brand = brand
 <!--                  -->        self.color = color
 <!--                  -->
-<!--                  -->my_car = Car('Volvo', 'zielony')
+<!--                  -->my_car = Car('<input type="text" class="ex_obj1" value="Volvo"></input>', '<input type="text" class="ex_obj2" value="zielony"></input>')
 <!--                  -->print(f'Mój samochód jest marki {my_car.brand}, a jego kolor to {my_car.color}')</pre>
                 </div>
                 <div class="row">
@@ -485,7 +549,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>public class Main {
 <!--                  -->    public static void main(String[] args) {
-<!--                  -->        Car myCar = new Car("Volvo", "zielony");
+<!--                  -->        Car myCar = new Car("<input type="text" class="ex_obj1" value="Volvo"></input>", "<input type="text" class="ex_obj2" value="zielony"></input>");
 <!--                  -->        System.out.println("Mój samochód jest marki " + myCar.brand
 <!--                  -->            + ", a jego kolor to " + myCar.color);
 <!--                  -->    }
@@ -507,7 +571,7 @@
                 <div class="row border p-3 mb-3">
                     <pre>internal class Program {
 <!--                  -->    static void Main(string[] args) {
-<!--                  -->        Car myCar = new Car("Volvo", "zielony");
+<!--                  -->        Car myCar = new Car("<input type="text" class="ex_obj1" value="Volvo"></input>", "<input type="text" class="ex_obj2" value="zielony"></input>");
 <!--                  -->        Console.WriteLine($"Mój samochód jest marki {myCar.brand}, a jego kolor to {myCar.color}");
 <!--                  -->    }
 <!--                  -->}
@@ -521,6 +585,12 @@
 <!--                  -->        this.color = color;
 <!--                  -->    }
 <!--                  -->}</pre>
+                </div>
+                <div class="row">
+                    Wynik kompilacji kodu
+                </div>
+                <div class="row border p-3 mb-3 console" >
+                    <p>Mój samochód jest marki <span id="ex_obj1d">Volvo</span>, a jego kolor to <span id="ex_obj2d">zielony</span></p>
                 </div>
             </div>
         </div>

@@ -20,54 +20,37 @@
       </div>
     </div>
   </nav>
-  <div class="content guideline ">
-    <p>Pytanie</p>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
+  <div class="content guideline">
+    <form>
+      <h5>1. Jaki będzie wynik następującego kodu Python?</h5>
+      <div class="row border p-3 mb-3">
+        <pre>number = 2
+<!--                  -->if number < 1:
+<!--                  -->    print('Warunek if')
+<!--                  -->elif number > 1:
+<!--                  -->    print('Warunek else if')
+<!--                  -->else:
+<!--                  -->    print('Warunek else')</pre>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-    </div>
-    <p>Pytanie</p>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-    </div>
-</div>
-
-
+      <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="ans1">
+        Warunek if</div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="ans2">
+        Warunek else if</div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="ans3">
+        Warunek else</div>
+        <br>
+      <h5>2. Która funkcja wyświetlająca tekst występuje w języku Java?</h5>
+      <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="ans1">
+        print("Tekst")</div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="ans2">
+        System.out.println("Tekst");</div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="ans3">
+        Console.WriteLine("Teskt");</div>
+        <br>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+    
+  </div>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/app.js"></script>
