@@ -31,20 +31,10 @@
             <h5>Porównywarka pozwala również przetestować swoją wiedzę :)</h5>
         </div>
 
-        <style>
-            pre {
-                margin: 0;
-            }
-
-            div[id^="example_"] .row:nth-child(odd) {
-                font-weight: bold;
-            }
-        </style>
-
         <div class="container mt-5">
             <select id="select_example" class="form-select mb-3" onchange="showExamples();">
-                <option value="variables">Zmienne</option>
                 <option value="print">Wyświetlenie tekstu w konsoli</option>
+                <option value="variables">Zmienne</option>
                 <option value="input">Pobieranie inputu</option>
                 <option value="if">Instrukcje warunkowe</option>
                 <option value="if_short">Krótkie instrukcje warunkowe</option>
@@ -56,7 +46,44 @@
                 <option value="objects">Obiekty</option>
             </select>
 
-            <div id="example_variables">
+            <div id="example_print">
+                <div class="container">
+                    <div class="row">
+                        Python
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>print('<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>')</pre>
+                    </div>
+                    <div class="row">
+                        Java
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>public class Main {
+<!--                  -->    public static void main(String[] args) {
+<!--                  -->        System.out.println("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
+<!--                  -->    }
+<!--                  -->}</pre>
+                    </div>
+                    <div class="row">
+                        C#
+                    </div>
+                    <div class="row border p-3 mb-3">
+                        <pre>internal class Program {
+<!--                  -->    static void Main(string[] args) {
+<!--                  -->        Console.WriteLine("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
+<!--                  -->    }
+<!--                  -->}</pre>
+                    </div>
+                    <div class="row">
+                        Wynik kompilacji kodu
+                    </div>
+                    <div class="row border p-3 mb-3 console" id="ex_printd">
+                        Uniwersytet Zielonogórski
+                    </div>
+                </div>
+            </div>
+
+            <div id="example_variables" class="d-none">
                 <div class="container">
                     <div class="row">
                         Python
@@ -92,43 +119,6 @@
 <!--                  -->        string text = "string";
 <!--                  -->    }
 <!--                  -->}</pre>
-                    </div>
-                </div>
-            </div>
-
-            <div id="example_print" class="d-none">
-                <div class="container">
-                    <div class="row">
-                        Python
-                    </div>
-                    <div class="row border p-3 mb-3">
-                        <pre>print('<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>')</pre>
-                    </div>
-                    <div class="row">
-                        Java
-                    </div>
-                    <div class="row border p-3 mb-3">
-                        <pre>public class Main {
-<!--                  -->    public static void main(String[] args) {
-<!--                  -->        System.out.println("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
-<!--                  -->    }
-<!--                  -->}</pre>
-                    </div>
-                    <div class="row">
-                        C#
-                    </div>
-                    <div class="row border p-3 mb-3">
-                        <pre>internal class Program {
-<!--                  -->    static void Main(string[] args) {
-<!--                  -->        Console.WriteLine("<input type="text" class="ex_print" value="Uniwersytet Zielonogórski"></input>");
-<!--                  -->    }
-<!--                  -->}</pre>
-                    </div>
-                    <div class="row">
-                        Wynik kompilacji kodu
-                    </div>
-                    <div class="row border p-3 mb-3 console" id="ex_printd">
-                        Uniwersytet Zielonogórski
                     </div>
                 </div>
             </div>

@@ -67,63 +67,35 @@ $(document).ready(function () {
     $("form").submit(function (event) {
         event.preventDefault();
 
-        var numCorrect = 0;
+        let correct_answers = 0;
+        if ($("input[name=q1]:checked").val() == "ans2") { correct_answers++; }
+        if ($("input[name=q2]:checked").val() == "ans2") { correct_answers++; }
+        if ($("input[name=q3]:checked").val() == "ans1") { correct_answers++; }
+        if ($("input[name=q4]:checked").val() == "ans3") { correct_answers++; }
+        if ($("input[name=q5]:checked").val() == "ans2") { correct_answers++; }
+        if ($("input[name=q6]:checked").val() == "ans1") { correct_answers++; }
+        if ($("input[name=q7]:checked").val() == "ans3") { correct_answers++; }
+        if ($("input[name=q8]:checked").val() == "ans2") { correct_answers++; }
+        if ($("input[name=q9]:checked").val() == "ans1") { correct_answers++; }
+        if ($("input[name=q10]:checked").val() == "ans3") { correct_answers++; }
 
-
-        if ($("input[name=q1]:checked").val() == "ans2") {
-            numCorrect++;
-        }
-
-        if ($("input[name=q2]:checked").val() == "ans2") {
-            numCorrect++;
-        }
-
-        if ($("input[name=q3]:checked").val() == "ans1") {
-            numCorrect++;
-        }
-
-        if ($("input[name=q4]:checked").val() == "ans3") {
-            numCorrect++;
-        }
-        if ($("input[name=q5]:checked").val() == "ans2") {
-            numCorrect++;
-        }
-
-        if ($("input[name=q6]:checked").val() == "ans1") {
-            numCorrect++;
-        }
-        if ($("input[name=q7]:checked").val() == "ans3") {
-            numCorrect++;
-        }
-
-        if ($("input[name=q8]:checked").val() == "ans2") {
-            numCorrect++;
-        }
-        if ($("input[name=q9]:checked").val() == "ans1") {
-            numCorrect++;
-        }
-
-        if ($("input[name=q10]:checked").val() == "ans3") {
-            numCorrect++;
-        }
-        var percentage = (numCorrect / 10) * 100;
-        var d = new Date();
-        var strDate = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
-        var person = $("#name").val();
-        
-        if (percentage > 79) {
-            
-            window.open('./diploma.html', '_blank', 'width=800,height=600');
-            sessionStorage.setItem("currDate",strDate);
-            sessionStorage.setItem("currPerson", person);
-            sessionStorage.setItem("currPercentage", percentage);
-        }
-        else {    
-            window.open('./diploma.html', '_blank', 'width=800,height=600');
-        }
+        sessionStorage.setItem('data_percents', correct_answers * 10);
+        sessionStorage.setItem('data_person', $('#name').val());
+        window.open('./diploma.html', '_blank', 'width=800,height=600');
     });
 });
 
-function generateDiploma(){
-    $("#result").html("<h1 class='text-dark'>Gratulacje!</h1><h2 class='text-muted'>Uzyskałeś bardzo wysoki wynik na naszym teście Porównywarki Kodów!</h2><p>Twoja ciężka praca i poświęcenie przyniosły efekty. Twój wysoki wynik jest świadectwem Twojej wiedzy i umiejętności. Bądź nadal tak skuteczny!</p><div class='score text-dark'>Twój wynik to:"+sessionStorage.getItem("currPercentage")+"</div><h4>Certyfikat dla:</h4>"+sessionStorage.getItem("currPerson")+"<h4></h4><p>Data:</p><p>"+sessionStorage.getItem("currDate")+"</p><div>Ten certyfikat nie jest oficjalnym dokumentem, tylko cyfrową reprezentacją osiągnięcia.</div>")
+function generateDiploma() {
+    let percents = parseInt(sessionStorage.getItem('data_percents'));
+    let person = sessionStorage.getItem('data_person');
+
+    $('.data_percents').html(percents);
+    $('#data_person').html(person ? person : '?');
+    $('#data_date').html(new Date().toLocaleDateString());
+
+    if (percents >= 80) {
+        $('#result_success').removeClass('d-none');
+    } else {
+        $('#result_failed').removeClass('d-none');
+    }
 }       

@@ -15,3 +15,11 @@
     background: black;
     color: white;
 }
+
+pre {
+    margin: 0;
+}
+
+div[id^="example_"] .row:nth-child(odd) {
+    font-weight: bold;
+}

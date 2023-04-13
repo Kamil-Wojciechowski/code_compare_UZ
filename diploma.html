@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Certyfikat | Porównywarka kodów</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/app.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certyfikat | Porównywarka kodów</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-
-<body onload="generateDiploma()">
-    <div class="container card text-center">
-        <div class="card-body" id="result">
-            Niestety nie udało się tym razem
+    <body onload="generateDiploma()">
+        <div class="container card text-center">
+            <div class="card-body">
+                <div id="result_failed" class="d-none">    
+                    <h1 class="text-dark">Niestety!</h1>
+                    <h2 class="text-muted">Tym razem się nie udało, przejrzyj instrukcje jeszcze raz i spróbuj ponownie!</h2>
+                    <div class="text-dark">Twój wynik to: <span class="data_percents"></span>%</div>
+                </div>
+                <div id="result_success" class="d-none">
+                    <h1 class="text-dark">Gratulacje!</h1>
+                    <h2 class="text-muted">Uzyskałeś bardzo wysoki wynik na naszym teście Porównywarki Kodów!</h2>
+                    <p>Twoja ciężka praca i poświęcenie przyniosły efekty. Twój wysoki wynik jest świadectwem Twojej wiedzy i umiejętności. Bądź nadal tak skuteczny!</p>
+                    <h4>Certyfikat dla:</h4>
+                    <span id="data_person"></span>
+                    <div class="text-dark">Twój wynik to: <span class="data_percents"></span>%</div>
+                    <p>Data: <span id="data_date"></span></p>
+                    <div>Ten certyfikat nie jest oficjalnym dokumentem, tylko cyfrową reprezentacją osiągnięcia.</div>
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/app.js"></script>
-
-</body>
-
+    </body>
 </html>
